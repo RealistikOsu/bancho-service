@@ -2,7 +2,7 @@
 
 FROM python:3.10
 
-WORKDIR /amnesia
+WORKDIR /bancho-service
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
