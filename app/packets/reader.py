@@ -20,42 +20,42 @@ class ReadableBuffer:
     def read_u16(self) -> int:
         return int.from_bytes(
             self._select(2),
-            "little",
+            byteorder="little",
             signed=False,
         )
 
     def read_u32(self) -> int:
         return int.from_bytes(
             self._select(4),
-            "little",
+            byteorder="little",
             signed=False,
         )
 
     def read_u64(self) -> int:
         return int.from_bytes(
             self._select(8),
-            "little",
+            byteorder="little",
             signed=False,
         )
 
     def read_i16(self) -> int:
         return int.from_bytes(
             self._select(2),
-            "little",
+            byteorder="little",
             signed=True,
         )
 
     def read_i32(self) -> int:
         return int.from_bytes(
             self._select(4),
-            "little",
+            byteorder="little",
             signed=True,
         )
 
     def read_i64(self) -> int:
         return int.from_bytes(
             self._select(8),
-            "little",
+            byteorder="little",
             signed=True,
         )
 

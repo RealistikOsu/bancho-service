@@ -1,9 +1,7 @@
 from __future__ import annotations
 
-from enum import IntFlag
 
-
-class Privileges(IntFlag):
+class Privileges:
     LOGIN = 1 << 0
     PROFILE_PUBLIC = 1 << 1
     SEND_PUBLIC_MESSAGE = 1 << 2
