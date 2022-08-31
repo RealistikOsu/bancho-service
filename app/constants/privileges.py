@@ -1,4 +1,7 @@
+from __future__ import annotations
+
 from enum import IntFlag
+
 
 class Privileges(IntFlag):
     LOGIN = 1 << 0
