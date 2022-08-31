@@ -1,12 +1,19 @@
 from __future__ import annotations
 
+from typing import NamedTuple
 from typing import Optional
 from typing import Protocol
+from typing import TYPE_CHECKING
 from typing import Union
 
 
+class PacketContext(NamedTuple):
+    reader: ...
+    player: ...
+
+
 class PacketHandler(Protocol):
-    def __call__(self, *args: ALL_TYPES) -> Optional[bytes]:
+    async def __call__(self, ctx: PacketContext, *args: ALL_TYPES) -> Optional[bytes]:
         ...
 
 
